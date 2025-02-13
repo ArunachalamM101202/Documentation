@@ -1,0 +1,28 @@
+site_name: "Documentation"
+theme:
+  name: material  # Using Material theme as an example, requires: pip install mkdocs-material
+  features:
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      toggle:
+        icon: material/white-balance-sunny
+        name: Switch to light mode
+nav:
+  - Home: index.md
+  - Creating a Python Virtual Environment: guide/create-venv.md
+
+markdown_extensions:
+  - codehilite
+  - admonition
+  - toc:
+      permalink: true
+
+  
+
