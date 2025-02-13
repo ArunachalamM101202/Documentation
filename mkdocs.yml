@@ -17,6 +17,7 @@ theme:
 nav:
   - Home: index.md
   - Creating a Python Virtual Environment: guide/create-venv.md
+  - Deploying Streamlit App: guide/streamlit-deploy.md
 
 markdown_extensions:
   - codehilite
