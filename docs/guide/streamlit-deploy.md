@@ -1,8 +1,4 @@
-Here’s a **detailed step-by-step guide** to help anyone **deploy a Python Streamlit app to Streamlit Community Cloud**. This documentation is designed for **beginners** who want an easy and clear process.
-
----
-
-# **🚀 Deploy a Python Streamlit App to Streamlit Cloud**
+# ** Deploy a Python Streamlit App to Streamlit Cloud**
 
 This guide walks you through **writing a Streamlit app**, **connecting to GitHub**, and **deploying it to Streamlit Cloud** in simple steps.
 
@@ -13,7 +9,7 @@ This guide walks you through **writing a Streamlit app**, **connecting to GitHub
 Before writing code, ensure **Python** is installed. Download it from:  
 🔗 [Python Official Website](https://www.python.org/downloads/)
 
-Next, open **VS Code**, launch a terminal, and install Streamlit:
+Next, open **VS Code**, launch a terminal using Terminal->New Terminal, create a virtual environment in python using [Creating Python Virtual Environment](https://arunachalamm101202.github.io/Documentation/guide/create-venv/) and install Streamlit using the following command:
 
 ```bash
 pip install streamlit
