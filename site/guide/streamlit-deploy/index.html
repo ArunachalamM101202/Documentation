@@ -431,24 +431,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3-select-python-version-advanced-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      3️⃣ Select Python Version &amp; Advanced Settings
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-add-api-keys-secrets-if-needed" class="md-nav__link">
+  <a href="#step-4-add-python-version-and-api-keys-secrets-if-needed" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Step 4: Add API Keys &amp; Secrets (If Needed)
+      📌 Step 4: Add Python version and API Keys &amp; Secrets (If Needed)
     </span>
   </a>
   
@@ -627,24 +618,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3-select-python-version-advanced-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      3️⃣ Select Python Version &amp; Advanced Settings
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-add-api-keys-secrets-if-needed" class="md-nav__link">
+  <a href="#step-4-add-python-version-and-api-keys-secrets-if-needed" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Step 4: Add API Keys &amp; Secrets (If Needed)
+      📌 Step 4: Add Python version and API Keys &amp; Secrets (If Needed)
     </span>
   </a>
   
@@ -809,32 +791,46 @@ The above commands will first connect to your repository in Github, fetch the la
 </ul>
 <h3 id="2-create-a-new-app"><strong>2️⃣ Create a New App</strong><a class="headerlink" href="#2-create-a-new-app" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Click <strong>"New App"</strong> at the top right.</li>
-<li>Select your GitHub repository (<code>streamlit-app</code>).</li>
+<li>
+<p>Click <strong>"Create App"</strong> at the top right.
+<img alt="Streamlit Deployment" src="../images/create_app_streamlit.png" /></p>
+</li>
+<li>
+<p>Select <strong>"Deploy a public app from GitHub"</strong>
+<img alt="Streamlit Deployment" src="../images/streamlit_github.png" /></p>
+</li>
+<li>
+<p>Select your GitHub repository (<code>streamlit-app</code>).</p>
+</li>
 <li>Choose the <code>main</code> branch.</li>
-<li>Select the python file <code>app.py</code></li>
-<li>Give a good nice domain name for the app, for example <code>my-test-app</code></li>
+<li>
+<p>Select the python file <code>app.py</code>
+<img alt="Streamlit Deployment" src="../images/streamlit_setup.png" /></p>
+</li>
+<li>
+<p>Give a good nice domain name for the app, for example <code>my-test-app-1234</code></p>
+</li>
 </ul>
-<h3 id="3-select-python-version-advanced-settings"><strong>3️⃣ Select Python Version &amp; Advanced Settings</strong><a class="headerlink" href="#3-select-python-version-advanced-settings" title="Permanent link">&para;</a></h3>
+<h2 id="step-4-add-python-version-and-api-keys-secrets-if-needed"><strong>📌 Step 4: Add Python version and API Keys &amp; Secrets (If Needed)</strong><a class="headerlink" href="#step-4-add-python-version-and-api-keys-secrets-if-needed" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Set <strong>Python Version</strong> (e.g., <code>3.10</code> or <code>3.11</code>).</li>
 <li>Click <strong>Advanced settings</strong>:</li>
+<li>Set <strong>Python Version</strong> (e.g., <code>3.11</code> or <code>3.12</code>).</li>
 <li>If your app requires external API keys, you can <strong>add secrets</strong> here.</li>
 </ul>
-<hr />
-<h2 id="step-4-add-api-keys-secrets-if-needed"><strong>📌 Step 4: Add API Keys &amp; Secrets (If Needed)</strong><a class="headerlink" href="#step-4-add-api-keys-secrets-if-needed" title="Permanent link">&para;</a></h2>
-<p>In Advanced Settings of Streamlit Deployment in Streamlit cloud, add all your secrets (API Keys etc from your .env file) in a toml format. Here is an example:</p>
+<p>In Advanced Settings of Streamlit Deployment, add all your secrets (API Keys etc from your .env file) in a toml format. Here is an example:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">OPENAI_API_KEY</span><span class="o">=</span><span class="s2">&quot;your-openai-api-key&quot;</span>
 </code></pre></div>
 
 <p>Click Save after adding the secrets in advanced settings</p>
+<p><img alt="Streamlit Deployment" src="../images/secrets.png" /></p>
 <h2 id="step-5-finalize-share"><strong>📌 Step 5: Finalize &amp; Share</strong><a class="headerlink" href="#step-5-finalize-share" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Click <strong>Deploy</strong> and wait for Streamlit to set up your app.</li>
 <li>Once done, Streamlit will provide a <strong>live URL</strong> to share your app.</li>
 </ul>
 <p>Example:<br />
-🔗 <a href="https://my-test-app.streamlit.app">https://my-test-app.streamlit.app</a></p>
+🔗 <a href="https://my-test-app-1234.streamlit.app">https://my-test-app-1234.streamlit.app</a>
+<img alt="Streamlit Deployment" src="../images/deployed_app.png" /></p>
 <hr />
 <h2 id="congratulations"><strong>🎉 Congratulations!</strong><a class="headerlink" href="#congratulations" title="Permanent link">&para;</a></h2>
 <p>You have successfully:
