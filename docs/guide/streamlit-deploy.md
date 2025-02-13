@@ -27,9 +27,10 @@ st.title("🚀 My First Streamlit App")
 st.write("Hello, Streamlit Community!")
 ```
 
-After you add your python code, you need to setup a requirements.txt file which contains the libraries needed to install before for the web app to work. To generate a requirements.txt, do the following steps"
-1. Open ChatGPT or Claude
-2. Paste the following prompt. Replace with your python code
+After you add your python code, you need to setup a requirements.txt file which contains the libraries needed to install before for the web app to work. To generate a requirements.txt, do the following steps:
+
+- 1. Open ChatGPT or Claude
+- 2. Paste the following prompt. Replace with your python code
 ```
 Generate a requirements.txt file for the following python code without any versions for the libraries:
 
