@@ -452,30 +452,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📌 Step 4: Add API Keys & Secrets (If Needed)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-create-a-streamlitsecretstoml-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      1️⃣ Create a .streamlit/secrets.toml File
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-add-secrets-in-streamlit-cloud" class="md-nav__link">
-    <span class="md-ellipsis">
-      2️⃣ Add Secrets in Streamlit Cloud
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -493,21 +469,6 @@
       🎉 Congratulations!
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="🎉 Congratulations!">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#image-to-do" class="md-nav__link">
-    <span class="md-ellipsis">
-      [image to do ]
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -687,30 +648,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📌 Step 4: Add API Keys & Secrets (If Needed)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-create-a-streamlitsecretstoml-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      1️⃣ Create a .streamlit/secrets.toml File
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-add-secrets-in-streamlit-cloud" class="md-nav__link">
-    <span class="md-ellipsis">
-      2️⃣ Add Secrets in Streamlit Cloud
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -729,21 +666,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🎉 Congratulations!">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#image-to-do" class="md-nav__link">
-    <span class="md-ellipsis">
-      [image to do ]
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -761,7 +683,7 @@
                   
 
 
-<h1 id="deploy-a-python-streamlit-app-to-streamlit-cloud">** Deploy a Python Streamlit App to Streamlit Cloud**<a class="headerlink" href="#deploy-a-python-streamlit-app-to-streamlit-cloud" title="Permanent link">&para;</a></h1>
+<h1 id="deploy-a-python-streamlit-app-to-streamlit-cloud"><strong>Deploy a Python Streamlit App to Streamlit Cloud</strong><a class="headerlink" href="#deploy-a-python-streamlit-app-to-streamlit-cloud" title="Permanent link">&para;</a></h1>
 <p>This guide walks you through <strong>writing a Streamlit app</strong>, <strong>connecting to GitHub</strong>, and <strong>deploying it to Streamlit Cloud</strong> in simple steps.</p>
 <hr />
 <h2 id="step-1-write-a-simple-streamlit-app-in-vs-code"><strong>📌 Step 1: Write a Simple Streamlit App in VS Code</strong><a class="headerlink" href="#step-1-write-a-simple-streamlit-app-in-vs-code" title="Permanent link">&para;</a></h2>
@@ -774,8 +696,7 @@
 
 <h3 id="2-create-a-python-file"><strong>2️⃣ Create a Python File</strong><a class="headerlink" href="#2-create-a-python-file" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Open <strong>VS Code</strong>.</li>
-<li>Create a new folder for your project.</li>
+<li>Create a new folder for your project (File-&gt;New File/Open Folder).</li>
 <li>Inside the folder, create a Python file, e.g., <code>app.py</code>.</li>
 <li>Add this simple Streamlit app:</li>
 </ul>
@@ -785,19 +706,36 @@
 <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, Streamlit Community!&quot;</span><span class="p">)</span>
 </code></pre></div>
 
+<p>After you add your python code, you need to setup a requirements.txt file which contains the libraries needed to install before for the web app to work. To generate a requirements.txt, do the following steps"
+1. Open ChatGPT or Claude
+2. Paste the following prompt. Replace with your python code</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Generate</span> <span class="n">a</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span> <span class="n">file</span> <span class="k">for</span> <span class="n">the</span> <span class="n">following</span> <span class="n">python</span> <span class="n">code</span> <span class="n">without</span> <span class="nb">any</span> <span class="n">versions</span> <span class="k">for</span> <span class="n">the</span> <span class="n">libraries</span><span class="p">:</span>
+
+<span class="n">Code</span><span class="p">:</span>
+
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;🚀 My First Streamlit App&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, Streamlit Community!&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>The LLM will generate the names of all the required libraries in requirements.txt needed to deploy your application.</p>
+<div class="codehilite"><pre><span></span><code>streamlit
+</code></pre></div>
+
+<p>Go to VSCode, and Create a file named <code>requirements.txt</code> and add the libraries provided by ChatGPT/Claude and save the file.</p>
 <h3 id="3-run-the-app-locally"><strong>3️⃣ Run the App Locally</strong><a class="headerlink" href="#3-run-the-app-locally" title="Permanent link">&para;</a></h3>
 <p>To test the app before deployment, run:</p>
 <div class="codehilite"><pre><span></span><code>streamlit<span class="w"> </span>run<span class="w"> </span>app.py
 </code></pre></div>
 
-<p>This should open a local webpage showing your app. If everything works, proceed to the next step.</p>
+<p>This should open a local webpage showing your app. If everything works, proceed to the next step. Ensure your virtual environment is running before executing the streamlit command</p>
 <hr />
 <h2 id="step-2-upload-your-code-to-github"><strong>📌 Step 2: Upload Your Code to GitHub</strong><a class="headerlink" href="#step-2-upload-your-code-to-github" title="Permanent link">&para;</a></h2>
 <h3 id="1-create-a-github-account"><strong>1️⃣ Create a GitHub Account</strong><a class="headerlink" href="#1-create-a-github-account" title="Permanent link">&para;</a></h3>
 <p>🔗 <a href="https://github.com/">Sign up on GitHub</a> (if you don't have an account).</p>
 <h3 id="2-initialize-a-git-repository-in-vs-code"><strong>2️⃣ Initialize a Git Repository in VS Code</strong><a class="headerlink" href="#2-initialize-a-git-repository-in-vs-code" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Open VS Code terminal in your project folder.</li>
+<li>Open VS Code terminal (Terminal-&gt;New Terminal) in your project folder.</li>
 <li>Run the following commands to initialize Git:</li>
 </ul>
 <div class="codehilite"><pre><span></span><code>git<span class="w"> </span>init
@@ -807,9 +745,9 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 
 <h3 id="3-create-a-github-repository"><strong>3️⃣ Create a GitHub Repository</strong><a class="headerlink" href="#3-create-a-github-repository" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Go to <strong>GitHub</strong> → Click <strong>New Repository</strong>.</li>
+<li>Go to <a href="https://github.com">GitHub</a> → Login to your account -&gt; Click your profile at the top right -&gt; Select "Your Repositories" -&gt; Click <strong>New Repository</strong>.</li>
 <li>Give it a name, e.g., <code>streamlit-app</code>.</li>
-<li>Select <strong>Public</strong> (required for Streamlit Cloud).</li>
+<li>Select <strong>Public or Private</strong> Private keeps the repository and the code within it hidden.</li>
 <li>Click <strong>Create Repository</strong>.</li>
 </ul>
 <h3 id="4-connect-vs-code-to-github-push-code"><strong>4️⃣ Connect VS Code to GitHub &amp; Push Code</strong><a class="headerlink" href="#4-connect-vs-code-to-github-push-code" title="Permanent link">&para;</a></h3>
@@ -833,39 +771,32 @@ git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span
 </ul>
 <h3 id="2-create-a-new-app"><strong>2️⃣ Create a New App</strong><a class="headerlink" href="#2-create-a-new-app" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Click <strong>"New App"</strong>.</li>
+<li>Click <strong>"New App"</strong> at the top right.</li>
 <li>Select your GitHub repository (<code>streamlit-app</code>).</li>
 <li>Choose the <code>main</code> branch.</li>
+<li>Select the python file <code>app.py</code></li>
+<li>Give a good nice domain name for the app, for example <code>my-test-app</code></li>
 </ul>
 <h3 id="3-select-python-version-advanced-settings"><strong>3️⃣ Select Python Version &amp; Advanced Settings</strong><a class="headerlink" href="#3-select-python-version-advanced-settings" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Set <strong>Python Version</strong> (e.g., <code>3.9</code> or <code>3.10</code>).</li>
+<li>Set <strong>Python Version</strong> (e.g., <code>3.10</code> or <code>3.11</code>).</li>
 <li>Click <strong>Advanced settings</strong>:</li>
 <li>If your app requires external API keys, you can <strong>add secrets</strong> here.</li>
 </ul>
 <hr />
 <h2 id="step-4-add-api-keys-secrets-if-needed"><strong>📌 Step 4: Add API Keys &amp; Secrets (If Needed)</strong><a class="headerlink" href="#step-4-add-api-keys-secrets-if-needed" title="Permanent link">&para;</a></h2>
-<p>If your app requires secret keys (e.g., OpenAI API, database credentials), store them securely.</p>
-<h3 id="1-create-a-streamlitsecretstoml-file"><strong>1️⃣ Create a <code>.streamlit/secrets.toml</code> File</strong><a class="headerlink" href="#1-create-a-streamlitsecretstoml-file" title="Permanent link">&para;</a></h3>
-<p>In your project folder, create a <code>.streamlit</code> directory and inside it, a <code>secrets.toml</code> file:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[api_keys]</span>
-<span class="n">openai_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;your-openai-api-key&quot;</span>
-<span class="n">database_url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;your-database-url&quot;</span>
+<p>In Advanced Settings of Streamlit Deployment in Streamlit cloud, add all your secrets (API Keys etc from your .env file) in a toml format. Here is an example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">OPENAI_API_KEY</span><span class="o">=</span><span class="s2">&quot;your-openai-api-key&quot;</span>
 </code></pre></div>
 
-<h3 id="2-add-secrets-in-streamlit-cloud"><strong>2️⃣ Add Secrets in Streamlit Cloud</strong><a class="headerlink" href="#2-add-secrets-in-streamlit-cloud" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Go to <strong>Streamlit Cloud</strong> → Your App → <strong>Settings</strong> → <strong>Secrets</strong>.</li>
-<li>Copy and paste the same <code>.toml</code> content there.</li>
-</ul>
-<hr />
+<p>Click Save after adding the secrets in advanced settings</p>
 <h2 id="step-5-finalize-share"><strong>📌 Step 5: Finalize &amp; Share</strong><a class="headerlink" href="#step-5-finalize-share" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Click <strong>Deploy</strong> and wait for Streamlit to set up your app.</li>
 <li>Once done, Streamlit will provide a <strong>live URL</strong> to share your app.</li>
 </ul>
 <p>Example:<br />
-🔗 <code>https://your-username-streamlit-app.streamlit.app</code></p>
+🔗 <a href="https://my-test-app.streamlit.app">https://my-test-app.streamlit.app</a></p>
 <hr />
 <h2 id="congratulations"><strong>🎉 Congratulations!</strong><a class="headerlink" href="#congratulations" title="Permanent link">&para;</a></h2>
 <p>You have successfully:
@@ -874,10 +805,6 @@ git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span
 ✅ Deployed it on Streamlit Cloud<br />
 ✅ Added secret keys securely  </p>
 <p>Now, you can <strong>share your app</strong> with anyone! 🚀</p>
-<hr />
-<h3 id="image-to-do"><strong>[image to do <task>]</strong><a class="headerlink" href="#image-to-do" title="Permanent link">&para;</a></h3>
-<p>(Add relevant images to make it easier for beginners, such as screenshots of VS Code, GitHub, and Streamlit Cloud steps.)</p>
-<p>Would you like to add more features, such as custom themes or data visualization? Let me know! 😊</p>
 
 
 
