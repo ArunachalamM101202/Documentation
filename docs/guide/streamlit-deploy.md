@@ -1,4 +1,4 @@
-# ** Deploy a Python Streamlit App to Streamlit Cloud**
+# **Deploy a Python Streamlit App to Streamlit Cloud**
 
 This guide walks you through **writing a Streamlit app**, **connecting to GitHub**, and **deploying it to Streamlit Cloud** in simple steps.
 
@@ -16,8 +16,7 @@ pip install streamlit
 ```
 
 ### **2️⃣ Create a Python File**
-- Open **VS Code**.
-- Create a new folder for your project.
+- Create a new folder for your project (File->New File/Open Folder).
 - Inside the folder, create a Python file, e.g., `app.py`.
 - Add this simple Streamlit app:
 
@@ -28,6 +27,26 @@ st.title("🚀 My First Streamlit App")
 st.write("Hello, Streamlit Community!")
 ```
 
+After you add your python code, you need to setup a requirements.txt file which contains the libraries needed to install before for the web app to work. To generate a requirements.txt, do the following steps"
+1. Open ChatGPT or Claude
+2. Paste the following prompt. Replace with your python code
+```
+Generate a requirements.txt file for the following python code without any versions for the libraries:
+
+Code:
+
+import streamlit as st
+st.title("🚀 My First Streamlit App")
+st.write("Hello, Streamlit Community!")
+```
+
+The LLM will generate the names of all the required libraries in requirements.txt needed to deploy your application.
+```
+streamlit
+```
+
+Go to VSCode, and Create a file named `requirements.txt` and add the libraries provided by ChatGPT/Claude and save the file.
+
 ### **3️⃣ Run the App Locally**
 To test the app before deployment, run:
 
@@ -35,7 +54,7 @@ To test the app before deployment, run:
 streamlit run app.py
 ```
 
-This should open a local webpage showing your app. If everything works, proceed to the next step.
+This should open a local webpage showing your app. If everything works, proceed to the next step. Ensure your virtual environment is running before executing the streamlit command
 
 ---
 
@@ -44,7 +63,7 @@ This should open a local webpage showing your app. If everything works, proceed 
 🔗 [Sign up on GitHub](https://github.com/) (if you don't have an account).
 
 ### **2️⃣ Initialize a Git Repository in VS Code**
-- Open VS Code terminal in your project folder.
+- Open VS Code terminal (Terminal->New Terminal) in your project folder.
 - Run the following commands to initialize Git:
 
 ```bash
@@ -54,9 +73,9 @@ git commit -m "Initial commit"
 ```
 
 ### **3️⃣ Create a GitHub Repository**
-- Go to **GitHub** → Click **New Repository**.
+- Go to [GitHub](https://github.com) → Login to your account -> Click your profile at the top right -> Select "Your Repositories" -> Click **New Repository**.
 - Give it a name, e.g., `streamlit-app`.
-- Select **Public** (required for Streamlit Cloud).
+- Select **Public or Private** Private keeps the repository and the code within it hidden.
 - Click **Create Repository**.
 
 ### **4️⃣ Connect VS Code to GitHub & Push Code**
@@ -80,41 +99,35 @@ Now your code is on GitHub! ✅
 - Authorize Streamlit to access your GitHub account.
 
 ### **2️⃣ Create a New App**
-- Click **"New App"**.
+- Click **"New App"** at the top right.
 - Select your GitHub repository (`streamlit-app`).
 - Choose the `main` branch.
+- Select the python file `app.py`
+- Give a good nice domain name for the app, for example `my-test-app`
 
 ### **3️⃣ Select Python Version & Advanced Settings**
-- Set **Python Version** (e.g., `3.9` or `3.10`).
+- Set **Python Version** (e.g., `3.10` or `3.11`).
 - Click **Advanced settings**:
   - If your app requires external API keys, you can **add secrets** here.
 
 ---
 
 ## **📌 Step 4: Add API Keys & Secrets (If Needed)**
-If your app requires secret keys (e.g., OpenAI API, database credentials), store them securely.
 
-### **1️⃣ Create a `.streamlit/secrets.toml` File**
-In your project folder, create a `.streamlit` directory and inside it, a `secrets.toml` file:
+In Advanced Settings of Streamlit Deployment in Streamlit cloud, add all your secrets (API Keys etc from your .env file) in a toml format. Here is an example:
 
 ```toml
-[api_keys]
-openai_key = "your-openai-api-key"
-database_url = "your-database-url"
+OPENAI_API_KEY="your-openai-api-key"
 ```
 
-### **2️⃣ Add Secrets in Streamlit Cloud**
-- Go to **Streamlit Cloud** → Your App → **Settings** → **Secrets**.
-- Copy and paste the same `.toml` content there.
-
----
+Click Save after adding the secrets in advanced settings
 
 ## **📌 Step 5: Finalize & Share**
 - Click **Deploy** and wait for Streamlit to set up your app.
 - Once done, Streamlit will provide a **live URL** to share your app.
 
 Example:  
-🔗 `https://your-username-streamlit-app.streamlit.app`
+🔗 [https://my-test-app.streamlit.app](https://my-test-app.streamlit.app)
 
 ---
 
@@ -126,10 +139,3 @@ You have successfully:
 ✅ Added secret keys securely  
 
 Now, you can **share your app** with anyone! 🚀
-
----
-
-### **[image to do <task>]**
-(Add relevant images to make it easier for beginners, such as screenshots of VS Code, GitHub, and Streamlit Cloud steps.)
-
-Would you like to add more features, such as custom themes or data visualization? Let me know! 😊
