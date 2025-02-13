@@ -690,15 +690,29 @@
 <h3 id="1-install-python-streamlit"><strong>1️⃣ Install Python &amp; Streamlit</strong><a class="headerlink" href="#1-install-python-streamlit" title="Permanent link">&para;</a></h3>
 <p>Before writing code, ensure <strong>Python</strong> is installed. Download it from:<br />
 🔗 <a href="https://www.python.org/downloads/">Python Official Website</a></p>
-<p>Next, open <strong>VS Code</strong>, launch a terminal using Terminal-&gt;New Terminal, create a virtual environment in python using <a href="https://arunachalamm101202.github.io/Documentation/guide/create-venv/">Creating Python Virtual Environment</a> and install Streamlit using the following command:</p>
+<p>Next, open <strong>VS Code</strong>, launch a terminal using Terminal-&gt; New Terminal
+<img alt="Streamlit Deployment" src="../images/new_terminal.png" /></p>
+<p>Create a virtual environment in python using <a href="https://arunachalamm101202.github.io/Documentation/guide/create-venv/">Creating Python Virtual Environment</a> and install Streamlit using the following command:</p>
 <div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>streamlit
 </code></pre></div>
 
 <h3 id="2-create-a-python-file"><strong>2️⃣ Create a Python File</strong><a class="headerlink" href="#2-create-a-python-file" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Create a new folder for your project (File-&gt;New File/Open Folder).</li>
-<li>Inside the folder, create a Python file, e.g., <code>app.py</code>.</li>
-<li>Add this simple Streamlit app:</li>
+<li>
+<p>Create a new folder for your project (File-&gt; Open Folder).
+<img alt="Streamlit Deployment" src="../images/new_folder.png" /></p>
+</li>
+<li>
+<p>Create a folder in your local machine
+<img alt="Streamlit Deployment" src="../images/local_folder.png" /></p>
+</li>
+<li>
+<p>Inside the folder, create a Python file, e.g., <code>app.py</code>.
+<img alt="Streamlit Deployment" src="../images/create_app.png" /></p>
+</li>
+<li>
+<p>Add this simple Streamlit app:</p>
+</li>
 </ul>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
 
@@ -724,12 +738,16 @@
 <div class="codehilite"><pre><span></span><code>streamlit
 </code></pre></div>
 
+<p><img alt="Streamlit Deployment" src="../images/requirements.png" /></p>
 <p>Go to VSCode, and Create a file named <code>requirements.txt</code> and add the libraries provided by ChatGPT/Claude and save the file.</p>
+<p><img alt="Streamlit Deployment" src="../images/req_file_generated.png" /></p>
 <h3 id="3-run-the-app-locally"><strong>3️⃣ Run the App Locally</strong><a class="headerlink" href="#3-run-the-app-locally" title="Permanent link">&para;</a></h3>
 <p>To test the app before deployment, run:</p>
 <div class="codehilite"><pre><span></span><code>streamlit<span class="w"> </span>run<span class="w"> </span>app.py
 </code></pre></div>
 
+<p><img alt="Streamlit Deployment" src="../images/running.png" /></p>
+<p><img alt="Streamlit Deployment" src="../images/running_web.png" /></p>
 <p>This should open a local webpage showing your app. If everything works, proceed to the next step. Ensure your virtual environment is running before executing the streamlit command</p>
 <hr />
 <h2 id="step-2-upload-your-code-to-github"><strong>📌 Step 2: Upload Your Code to GitHub</strong><a class="headerlink" href="#step-2-upload-your-code-to-github" title="Permanent link">&para;</a></h2>
@@ -745,22 +763,40 @@ git<span class="w"> </span>add<span class="w"> </span>.
 git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit&quot;</span>
 </code></pre></div>
 
+<p><img alt="Streamlit Deployment" src="../images/git_command_1.png" /></p>
 <h3 id="3-create-a-github-repository"><strong>3️⃣ Create a GitHub Repository</strong><a class="headerlink" href="#3-create-a-github-repository" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Go to <a href="https://github.com">GitHub</a> → Login to your account -&gt; Click your profile at the top right -&gt; Select "Your Repositories" -&gt; Click <strong>New Repository</strong>.</li>
-<li>Give it a name, e.g., <code>streamlit-app</code>.</li>
+<li>Go to <a href="https://github.com">GitHub</a> → Login to your account -&gt;
+<img alt="Streamlit Deployment" src="../images/github_main.png" /></li>
+</ul>
+<p>Click your profile at the top right -&gt; Select "Your Repositories" 
+<img alt="Streamlit Deployment" src="../images/github_your_repo.png" /></p>
+<p>Click <strong>New Button</strong> to create new repository.
+<img alt="Streamlit Deployment" src="../images/github_new.png" /></p>
+<ul>
+<li>Give it a name, e.g., <code>my-test-app</code>.</li>
 <li>Select <strong>Public or Private</strong> Private keeps the repository and the code within it hidden.</li>
-<li>Click <strong>Create Repository</strong>.</li>
+<li>
+<p>Select <code>Python</code> from the drop down of <code>.gitignore</code> template. This is needed to ensure unwanted python library files are not added to github.
+<img alt="Streamlit Deployment" src="../images/github_setup.png" /></p>
+</li>
+<li>
+<p>Click <strong>Create Repository</strong>.
+<img alt="Streamlit Deployment" src="../images/create_repo.png" /></p>
+</li>
 </ul>
 <h3 id="4-connect-vs-code-to-github-push-code"><strong>4️⃣ Connect VS Code to GitHub &amp; Push Code</strong><a class="headerlink" href="#4-connect-vs-code-to-github-push-code" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Back in VS Code terminal, run:</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/YOUR_USERNAME/streamlit-app.git
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/YOUR_USERNAME/YOUR_APP_NAME.git
 git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main<span class="w"> </span>--rebase
 git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
 </code></pre></div>
 
+<p><img alt="Streamlit Deployment" src="../images/github_pull_push.png" />
+The above commands will first connect to your repository in Github, fetch the latest code from your github repository and update it in your local machine's VS Code, and then push the code changes you made to the repository in Github.</p>
 <p>Now your code is on GitHub! ✅</p>
 <hr />
 <h2 id="step-3-deploy-to-streamlit-cloud"><strong>📌 Step 3: Deploy to Streamlit Cloud</strong><a class="headerlink" href="#step-3-deploy-to-streamlit-cloud" title="Permanent link">&para;</a></h2>
